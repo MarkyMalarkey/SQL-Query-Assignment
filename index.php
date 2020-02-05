@@ -2,7 +2,7 @@
 require_once('database.php');
 
 
-
+//This selects both the customer and address table, then it joins it by the customerID column that both tables have.
 $query = 'SELECT customer.customerID, customer.firstName, customer.lastName, address.emailAddress, address.line1, address.city, address.state, address.zipCode, customer.phone
 FROM `customer`
 INNER JOIN address ON customer.customerID = address.customerID
